@@ -113,17 +113,16 @@ public class ReinbursementDaoPostgres implements ReinbursementDao{
 
     try {
       stmt = conn.prepareStatement(
-          "INSERT INTO reinbursements (emp_Id, manager_Id, type, status, cost, "
+          "INSERT INTO reinbursements (emp_Id, type, status, cost, "
           + "requestor_comments, approver_comments, image_location) "
-          + "VALUES ( ?, ?, ?, ?, ?, ?, ?, ?)");
+          + "VALUES ( ?, ?, ?, ?, ?, ?, ?)");
       stmt.setInt(1, reinbursement.getEmp_Id());
-      stmt.setInt(2, reinbursement.getManager_Id());
-      stmt.setString(3, reinbursement.getType());
-      stmt.setString(4, reinbursement.getStatus());
-      stmt.setDouble(5, reinbursement.getCost());
-      stmt.setString(6, reinbursement.getRequestor_comments());
-      stmt.setString(7, reinbursement.getApprover_comments());
-      stmt.setString(8, reinbursement.getImage_location());
+      stmt.setString(2, reinbursement.getType());
+      stmt.setString(3, reinbursement.getStatus());
+      stmt.setDouble(4, reinbursement.getCost());
+      stmt.setString(5, reinbursement.getRequestor_comments());
+      stmt.setString(6, reinbursement.getApprover_comments());
+      stmt.setString(7, reinbursement.getImage_location());
 
       stmt.execute();
     } catch (SQLException e) {

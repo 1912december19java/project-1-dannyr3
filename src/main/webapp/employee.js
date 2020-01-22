@@ -81,8 +81,7 @@ async function sendReimbursement(){
 	let reimbursement = {};
 	reimbursement.emp_Id = i;
 	reimbursement.id = 0;
-	reimbursement.manager_Id = null;
-	reimbursement.datetime = "";
+	//reimbursement.manager_Id = " ";
 	reimbursement.type = rtype.value;
 	reimbursement.status = rstatus.value;
 	reimbursement.cost = rcost.value;
@@ -91,11 +90,21 @@ async function sendReimbursement(){
     reimbursement.image_location = rimage.value;
     
 	
-	let response = await fetch(myUri, {method: 'POST', body: JSON.stringify(reimbursement)});
+    let response = await fetch(myUri, {method: 'POST', body: JSON.stringify(reimbursement)});
+    
+    getReinbursementsEmployeeId(i);
 }
 
 
 async function getReinbursementsEmployeeId(i){
+    while (tb1.hasChildNodes()) {
+        tb1.removeChild(tb1.firstChild);
+    }
+
+    while (tb2.hasChildNodes()) {
+        tb2.removeChild(tb2.firstChild);
+    }
+
     await fetch(`http://localhost:8080/project-1-dannyr3/api/reinbursements/${i}`)
     .then((Response)=>{
         return Response.json()

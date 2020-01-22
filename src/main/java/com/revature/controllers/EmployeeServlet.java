@@ -78,10 +78,13 @@ public class EmployeeServlet extends HttpServlet{
       case "reinbursements":
         System.out.println(req.getReader().toString());
         Reinbursement receivedReinbursement = om.readValue(req.getReader(), Reinbursement.class);
-        System.out.println(receivedReinbursement.getImage_location());
+        receivedReinbursement.setStatus("Pending");
+        receivedReinbursement.setApprover_comments(" ");
+        System.out.println(receivedReinbursement.toString());
         try {
           service.createReinbursement(receivedReinbursement);
         } catch (Exception e) {
+          e.printStackTrace();
           resp.setStatus(400);
         }
         break;
