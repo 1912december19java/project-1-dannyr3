@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="manager.css">
+</head>
+
+<body>
+    <header class="jumbotron-fluid bg-primary j" style="background-color: #ff6f00 !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-9">
+                    <!--No stacking because no xs sm md or lg-->
+                    <h1 class="display-2 text-white" id="revature">Revature</h1>
+                </div>
+                <nav class="navbar navbar-expand-sm nav-pills col-3 rounded nav-logout"
+                    style="background-color: gainsboro !important;">
+                    <a class="navbar-brand logout btn btn-block" href="Index.html">Logout</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container-fluid whole-login">
+            <div class="row rounded border border-dark rein-t">
+                <div class="pending col-md-6">
+                    <div class="divtable pl-2">
+                        <h3 class="r">Pending Reinbursements</h3>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Reinbursement Id</th>
+                                    <th scope="col">Employee Id</th>
+                                    <th scope="col">Manager Id</th>
+                                    <th scope="col">Date and Time</th>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Requestor Comments</th>
+                                    <th scope="col">Approver Comments</th>
+                                    <th scope="col">Image</th>
+                                    <th scope="col">Approve/Decline</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tb-1">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="resolved col-md-6 pr-1">
+                    <div class="divtable">
+                        <h3 class="r">Approved/Declined Reinbursements</h3>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Reinbursement Id</th>
+                                    <th scope="col">Employee Id</th>
+                                    <th scope="col">Manager Id</th>
+                                    <th scope="col">Date and Time</th>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Requestor Comments</th>
+                                    <th scope="col">Approver Comments</th>
+                                    <th scope="col">Image</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tb-2">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid emp">
+                <div class="row rounded border border-dark emp-info">
+                    <div class="employee col-md-6">
+                        <form action="http://localhost:8080/project-1-dannyr3/login" method="post">
+                            <h2 class="text-center text-dark">Your Information</h2>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Username: &nbsp;</span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Username" required="required"
+                                        name="username" id="username">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Password: &nbsp;&nbsp;</span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Password" required="required"
+                                        name="password" id="password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">First Name:&nbsp;</span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="First Name" required="required"
+                                        name="firstName" id="firstName">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Last Name:&nbsp;</span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Last Name" required="required"
+                                        name="lastName" id="lastName">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block" id="e-submit">Submit Updated
+                                    Information</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="resolved col-md-6 pr-1">
+                        <div class="emp-divtable">
+                            <h3 class="r">All Employees : Click to Filter Reinbursements</h3>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Id</th>
+                                        <th scope="col">Username</th>
+                                        <th scope="col">Password</th>
+                                        <th scope="col">First Name</th>
+                                        <th scope="col">Last Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tb-3">
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <footer>
+        <div class="navbar fixed-bottom nat-bottom" style="background-color: #ff6f00 !important;"> HELLO
+
+        </div>
+    </footer>
+	<script src="manager.js"></script>
+</body>
+
+</html>

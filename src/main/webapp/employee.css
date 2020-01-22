@@ -1,0 +1,45 @@
+.j {
+    height: 180px;
+}
+
+.r {
+    text-align: center;
+}
+
+.button-holder {
+
+}
+
+.rein-t {
+    height: 425px;
+    margin-top: 10px;
+}
+
+.divtable {
+    overflow: scroll;
+    height: 380px;
+}
+
+.nav-logout {
+    height: 35px;
+    width: 30px;
+    margin-top: 3em;
+
+}
+
+.emp {
+    margin-top: 5px !important;
+    padding-bottom: 2% !important;
+    margin-bottom: 1px !important;
+}
+
+.emp-info {
+    margin-top: 20px !important;
+    margin-bottom: 1px !important;
+    margin-left: 20% !important;
+    margin-right: 20% !important;
+}
+
+.nav-bottom {
+    margin-top: 0;
+}
